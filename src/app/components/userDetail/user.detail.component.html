@@ -24,5 +24,9 @@
     <span>company:</span>
     <span>{{user.company.name}}</span>
   </div>
+  <div *ngIf="albums">
+    <span>Albums amount:</span>
+    <span>{{albums.length}}</span>
+  </div>
 </div>
 

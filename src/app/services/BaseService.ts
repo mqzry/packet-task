@@ -7,7 +7,7 @@ import 'rxjs/add/operator/toPromise';
 export class BaseService<T> {
   rootUrl = 'https://jsonplaceholder.typicode.com';
 
-  constructor(private http: Http, private path: string) {
+  constructor(protected http: Http, private path: string) {
   }
 
   getUrl(): string {
@@ -37,7 +37,7 @@ export class BaseService<T> {
       .catch(this.handleError);
   }
 
-  private handleError(error: any): Promise<any> {
+  protected handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);
   }
