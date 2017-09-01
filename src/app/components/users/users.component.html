@@ -1,7 +1,12 @@
 <h2>Users</h2>
 <ul class="users">
   <span>We have {{users && users.length}} users!</span>
-  <li *ngFor="let user of users" (click)="onSelect(user)">
-    <span>{{user.id}}</span> {{user.name}}
-  </li>
+  <user [user]="user" *ngFor="let user of users" (click)="onSelect(user)">
+  </user>
 </ul>
+
+<div *ngIf="selectedUser">
+  <h2>Selected User:</h2>
+  <userDetail [user]="selectedUser"></userDetail>
+</div>
+

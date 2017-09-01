@@ -1,5 +1,28 @@
-<div style="text-align:center">
-  <ul>
-
-  </ul>
+<div>
+  <div>
+    <span>name:</span>
+    <span>{{user.name}}</span>
+  </div>
+  <div>
+    <span>username:</span>
+    <span>{{user.username}}</span>
+  </div>
+  <div>
+    <span>email:</span>
+    <span>{{user.email}}</span>
+  </div>
+  <address [address]="user.address"></address>
+  <div>
+    <span>phone:</span>
+    <span>{{user.phone}}</span>
+  </div>
+  <div>
+    <span>website:</span>
+    <a href="{{user.website}}">{{user.website}}</a>
+  </div>
+  <div>
+    <span>company:</span>
+    <span>{{user.company.name}}</span>
+  </div>
+</div>
 

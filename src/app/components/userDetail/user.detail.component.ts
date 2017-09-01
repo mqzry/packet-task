@@ -1,10 +1,11 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {User} from '../../models/User';
 
 @Component({
-  selector: 'app-root',
+  selector: 'userDetail',
   templateUrl: './user.detail.component.html',
   styleUrls: ['./user.detail.component.css']
 })
 export class UserDetailComponent {
-  title = 'Welcome!';
+  @Input() user: User;
 }
